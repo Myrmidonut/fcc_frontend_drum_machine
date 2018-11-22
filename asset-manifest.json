@@ -1,14 +1,14 @@
 {
-  "main.css": "/fcc_frontend_drum_machine/static/css/main.8d04c79b.chunk.css",
-  "main.js": "/fcc_frontend_drum_machine/static/js/main.6d3acd83.chunk.js",
-  "main.js.map": "/fcc_frontend_drum_machine/static/js/main.6d3acd83.chunk.js.map",
+  "main.css": "/fcc_frontend_drum_machine/static/css/main.5e1d8e89.chunk.css",
+  "main.js": "/fcc_frontend_drum_machine/static/js/main.94ae14e0.chunk.js",
+  "main.js.map": "/fcc_frontend_drum_machine/static/js/main.94ae14e0.chunk.js.map",
   "static/js/1.37f90d57.chunk.js": "/fcc_frontend_drum_machine/static/js/1.37f90d57.chunk.js",
   "static/js/1.37f90d57.chunk.js.map": "/fcc_frontend_drum_machine/static/js/1.37f90d57.chunk.js.map",
   "runtime~main.js": "/fcc_frontend_drum_machine/static/js/runtime~main.deac6cfb.js",
   "runtime~main.js.map": "/fcc_frontend_drum_machine/static/js/runtime~main.deac6cfb.js.map",
-  "static/media/App.css": "/fcc_frontend_drum_machine/static/media/brushed metal.d1ba4d8f.jpg",
-  "static/css/main.8d04c79b.chunk.css.map": "/fcc_frontend_drum_machine/static/css/main.8d04c79b.chunk.css.map",
+  "static/media/App.css": "/fcc_frontend_drum_machine/static/media/brushed metal.ce522001.jpg",
+  "static/css/main.5e1d8e89.chunk.css.map": "/fcc_frontend_drum_machine/static/css/main.5e1d8e89.chunk.css.map",
   "index.html": "/fcc_frontend_drum_machine/index.html",
-  "precache-manifest.bc22724efb76c3f597f0cf11181d5fcb.js": "/fcc_frontend_drum_machine/precache-manifest.bc22724efb76c3f597f0cf11181d5fcb.js",
+  "precache-manifest.d8bcbf2436c14dedecf0f0698cd619f1.js": "/fcc_frontend_drum_machine/precache-manifest.d8bcbf2436c14dedecf0f0698cd619f1.js",
   "service-worker.js": "/fcc_frontend_drum_machine/service-worker.js"
 }
