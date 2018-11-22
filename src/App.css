@@ -1,28 +1,42 @@
-html, body {
+html, body, #root {
   margin: 0;
   padding: 0;
   height: 100%;
   background-color: #293133;
-  font-family: "Lato", sans-serif;
 }
 
-#root {
+.App {
   height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#background {
+  height: 100%;
+  width: 100%;
+  background-image: url("./concert.jpg");
+  background-size: cover;
+  filter: blur(5px);
 }
 
 #drum-machine {
+  position: absolute;
   max-width: 550px;
   margin: auto;
+  background-image: url("./brushed metal.jpg");
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 3px 3px 15px black;
 }
 
-.drum-pad {
-  width: 100px;
-  height: 100px;
+h1 {
+  font-family: "Pacifico", cursive;
+  margin: auto;
+  text-align: center;
+  text-shadow: 0px 0px 20px;
+  color: white;
   margin: 20px;
-  border-radius: 5%;
-  box-shadow: 3px 3px 20px;
-  font-size: 25px;
 }
 
 #display {
@@ -31,8 +45,13 @@ html, body {
   text-align: center;
   margin: 40px;
   font-size: 25px;
-  background-color: white;
+  color: #5cc300;
+  background-color: #173c12;
   box-shadow: 3px 3px 20px black;
+  border-radius: 2px;
+  box-shadow: inset 1px 1px 5px black;
+  margin-top: 20px;
+  font-family: "Oswald", sans-serif;
 }
 
 #button-container {
@@ -41,10 +60,49 @@ html, body {
   justify-items: center;
 }
 
-@media screen and (max-width: 400px) {
+.drum-pad {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 5%;
+  border: none;
+  box-shadow: 3px 3px 20px;
+  font-size: 25px;
+  background-color: rgba(255,244,0,1);
+  font-family: "Oswald", sans-serif;
+}
+
+.drum-pad:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 420px) {
+  #display {
+    margin-bottom: 20px;
+  }
+
+  #button-container {
+    margin-top: 20px;
+  }
+
+  #drum-machine {
+    width: 100%;
+    border-radius: 0;
+  }
+
   .drum-pad {
     width: 75px;
     height: 75px;
     margin: 10px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  #drum-machine {
+    height: 100%;
+  }
+
+  #button-container {
+    margin-top: 30px;
   }
 }

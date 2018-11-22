@@ -56,35 +56,70 @@ class App extends Component {
 
   playAudio(e) {
     let key = e.key.toUpperCase();
+
     if (key === "Y") key = "Z";
     
-    if (data.filter(entry => entry.key === key).length > 0) {
+    if (data.filter(e => e.key === key).length > 0) {
       const audio = document.getElementById(key);
 
       audio.load();
       audio.play();
       
       this.setState({
-        currentKey: data.filter(entry => entry.key === key)[0].description
+        currentKey: data.filter(e => e.key === key)[0].description
       })
+    }
+  }
+
+  keyCase(e) {
+    let key = e.key.toUpperCase();
+
+    if (key === "Y") return key = "Z";
+    else return key;
+  }
+
+  eventDownHandler(e) {
+    this.playAudio(e)
+
+    let key = this.keyCase(e);
+
+    if (data.filter(e => e.key === key).length > 0) {
+      document.querySelector("." + key).style.background = "rgba(25,255,70,1)";
+      document.querySelector("." + key).style.boxShadow = "0 0 20px rgba(25,255,70,1)"
+    }
+  }
+
+  eventUpHandler(e) {
+    let key = this.keyCase(e);
+    
+    if (data.filter(e => e.key === key).length > 0) {
+      document.querySelector("." + key).style.background = "rgba(255,244,0,1)";
+      document.querySelector("." + key).style.boxShadow = "0 0 20px black";
     }
   }
   
   componentDidMount() {
-    document.addEventListener("keydown", e => this.playAudio(e));
+    document.addEventListener("keydown", e => {
+      this.eventDownHandler(e);
+    })
+
+    document.addEventListener("keyup", e => {
+      this.eventUpHandler(e);
+    })
   }
   
-  componentWillUnmount() {
-    document.removeEventListener("keydown", e => this.playAudio(e));
-  }
+  //componentWillUnmount() {
+    //document.removeEventListener("keydown")//, e => this.playAudio(e))
+  //}
   
   render() {
     const buttons = data.map(e => {
       return (
         <button 
           key={e.key}
-          onClick={() => this.playAudio(e)}
-          className="drum-pad"
+          onMouseDown={() => this.eventDownHandler(e)}
+          onMouseUp={() => this.eventUpHandler(e)}
+          className={"drum-pad " + e.key}
           id={e.description} >
             {e.key}
             <audio 
@@ -95,14 +130,18 @@ class App extends Component {
         </button>
       )
     })
-  
+    
     return (
-      <div id="drum-machine">
-        <div id="display">
-          {this.state.currentKey}
-        </div>
-        <div id="button-container">
-          {buttons}
+      <div className="App">
+        <div id="background" />
+        <div id="drum-machine">
+          <h1>Drumpad</h1>
+          <div id="display">
+            {this.state.currentKey}
+          </div>
+          <div id="button-container">
+            {buttons}
+          </div>
         </div>
       </div>
     );
