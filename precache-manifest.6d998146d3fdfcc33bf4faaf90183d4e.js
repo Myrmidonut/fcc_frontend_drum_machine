@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "d6e2d6cb06795dac9ee6",
-    "url": "/fcc_frontend_drum_machine/static/css/main.e3ed2008.chunk.css"
+    "revision": "5e35ba34f565eb8e5f47",
+    "url": "/fcc_frontend_drum_machine/static/css/main.99c889a2.chunk.css"
   },
   {
-    "revision": "d6e2d6cb06795dac9ee6",
-    "url": "/fcc_frontend_drum_machine/static/js/main.d6e2d6cb.chunk.js"
+    "revision": "5e35ba34f565eb8e5f47",
+    "url": "/fcc_frontend_drum_machine/static/js/main.5e35ba34.chunk.js"
   },
   {
     "revision": "37f90d57916b981a0157",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/fcc_frontend_drum_machine/static/media/concert.ef060931.jpg"
   },
   {
-    "revision": "2995cacc4c792a9225988cb7439e926d",
+    "revision": "778d5289f8799aa5b1436d970a6b1867",
     "url": "/fcc_frontend_drum_machine/index.html"
   }
 ];
