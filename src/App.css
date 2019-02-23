@@ -60,6 +60,10 @@ h1 {
   justify-items: center;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .drum-pad {
   width: 100px;
   height: 100px;
